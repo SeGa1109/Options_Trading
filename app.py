@@ -14,6 +14,7 @@ def data_load():
 
     return df
 df = data_load()
+print(df)
 # ldir = fr"D:\Exponency\Git\Options_DataAnalysis\Options_Plot"
 # os.chdir(ldir)
 # df = pd.read_csv(fr"20Jan26.csv")
