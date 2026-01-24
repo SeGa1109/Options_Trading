@@ -5,7 +5,6 @@ import plotly.graph_objects as go
 
 @st.cache_data
 def data_load():
-    global df
     owner = "SeGa1109"
     repo = "Exponency"
     headers = {"Authorization": "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",
@@ -14,7 +13,7 @@ def data_load():
     df = pd.read_csv(raw_url)
 
     return df
-
+df = data_load()
 # ldir = fr"D:\Exponency\Git\Options_DataAnalysis\Options_Plot"
 # os.chdir(ldir)
 # df = pd.read_csv(fr"20Jan26.csv")
