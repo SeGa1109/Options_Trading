@@ -9,12 +9,11 @@ def data_load():
     repo = "Exponency"
     headers = {"Authorization": "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",
             "accept": "application/vnd.github.v3.raw"}
-    raw_url = f"https://raw.githubusercontent.com/SeGa1109/Exponency/main/FINPRRO/Scriplist.csv"
+    raw_url = f"https://raw.githubusercontent.com/SeGa1109/Options_Trading/refs/heads/main/20Jan26.csv"
     df = pd.read_csv(raw_url)
 
     return df
 df = data_load()
-print(df)
 # ldir = fr"D:\Exponency\Git\Options_DataAnalysis\Options_Plot"
 # os.chdir(ldir)
 # df = pd.read_csv(fr"20Jan26.csv")
@@ -60,8 +59,10 @@ if st.button("Generate"):
 
             fig.update_layout(xaxis_rangeslider_visible=True)
 
-
-            st.plotly_chart(fig, use_container_width=True)
+            col1,col2,col3 = st.columns([1, 3, 1])
+            
+            with col2:
+                st.plotly_chart(fig, use_container_width=True)
         else:st.text("No data available")
     if intervalVal == '1d':
         
