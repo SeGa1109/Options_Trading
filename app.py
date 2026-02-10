@@ -23,7 +23,7 @@ scriplist = ['24000CE','24000PE','24050CE','24050PE','24100CE','24100PE','24150C
 expiry, script, interval,dateEntry = st.columns(4)
 
 with expiry:
-    expiryVal = st.selectbox('Expiry',['20Jan26','03Feb26'])
+    expiryVal = st.selectbox('Expiry',['20Jan26','03Feb26','10Feb26'])
 
 with script:
     scripVal = st.selectbox('Script',scriplist)
