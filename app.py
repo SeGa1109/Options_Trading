@@ -40,7 +40,7 @@ if st.button("Generate"):
     df = data_load(expiryVal)
     if intervalVal == '1m':
         print(df.dtypes)
-        df['Timestamp'] = pd.to_datetime(df['Timestamp'], dayfirst=True)
+        df['Timestamp'] = pd.to_datetime(df['Timestamp'], format='mixed')
         print(type(dateEntryVal))
         print(df.dtypes)
         plotdf = df[(df['Scrip'] == scripVal) & (df['Timestamp'].dt.date == dateEntryVal)]
